@@ -41,5 +41,6 @@ body{
 }
 
 .endGame{
-    pointer-events: none;
+    display: none;
+    
 }
