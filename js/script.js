@@ -27,21 +27,28 @@ function getGriglia(width){
         cell.setAttribute('id', i);
         cell.classList.add(cellClass);
         griglia.append(cell);
-        cells.push(cell);
+        cells.push(i);
     }
     cellaSelezionata();
 }
 function cellaSelezionata(){
     let punti = 0;
+    let cellaCliccata = [];
+    
     for (i = 0; i < cells.length; i++){
         let cellaId = document.getElementById(i);
+
         cellaId.addEventListener('click', function(){
-            let cellaCliccata = [];
-                this.classList.add('cellaCliccata');
-                punti++;
-                cellaCliccata.push(this);
-                console.log(cellaCliccata);
-                console.log(punti);
+            for (let j = 0; j < cells.length; j++){
+                if(this.getAttribute('id') == bombe[j]){
+                    this.classList.add('cellaBomba');
+                } 
+            }
+            this.classList.add('cellaCliccata')
+            punti++;
+            cellaCliccata.push(this);
+            console.log(punti);    
+
         })
     }
 }
@@ -51,4 +58,16 @@ function generaBombe(range){
         bombe.push(Math.floor(Math.random() * (range * range - 1 + 1) + 1));
     }
     console.log(bombe);
+}
+
+
+function showBomb(){
+    for (let i = 0; i < cells.length; i++){
+       
+            if (bombe.includes(this.getAttribute('id'))){
+                this.classList.add('cellaBomba')
+            }
+        
+
+    }
 }

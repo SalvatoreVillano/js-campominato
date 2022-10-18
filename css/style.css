@@ -33,3 +33,13 @@ body{
     background-color: rgb(21, 255, 0);
     pointer-events: none;  
 }
+
+.cellaBomba{
+    background-color: red;
+    pointer-events: none;  
+
+}
+
+.endGame{
+    pointer-events: none;
+}
