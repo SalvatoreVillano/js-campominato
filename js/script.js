@@ -44,8 +44,8 @@ function cellaSelezionata(){
             for (let j = 0; j < cells.length; j++){
                 if(this.getAttribute('id') == bombe[j]){
                     this.classList.add('cellaBomba');
-                    griglia.classList.add('d-none');
-                    endGame.classList.remove('d-none')
+                    griglia.classList.add('pe-none');
+                    endGame.classList.remove('d-none');
                     endGame.innerHTML = `Hai perso, il tuo punteggio è di: ${punti}`;
                 }
             }
