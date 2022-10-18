@@ -1,0 +1,35 @@
+body{
+    min-height: 100vh;
+   background-image: linear-gradient(to bottom right, #a778ff, #c300ff);
+     }
+
+#griglia{
+    width: 500px;
+    height: 500px;
+} 
+
+.easy{
+    width: calc(100% / (100 / 10));
+    height: calc(100% / (100 / 10));
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hard{
+    width: calc(100% / (81 / 9));
+    height: calc(100% / (81 / 9));
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+
+.insane{
+    width: calc(100% / (49 / 7));
+    height: calc(100% / (49 / 7));
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+
+.cellaCliccata{
+    background-color: rgb(21, 255, 0);
+    pointer-events: none;  
+}
